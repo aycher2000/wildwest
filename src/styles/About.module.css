@@ -50,6 +50,7 @@
   padding: 1.5rem;
   background: rgba(255, 215, 0, 0.05);
   border-radius: 4px;
+  text-align: center;
 }
 
 .highlight p {
@@ -60,7 +61,7 @@
 
 .closing {
   margin-top: 2rem;
-  text-align: left;
+  text-align: center;
 }
 
 .closing p {
