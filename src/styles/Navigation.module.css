@@ -61,6 +61,10 @@
   width: 100%;
   padding: 0.5rem 0;
   background-color: rgba(0, 0, 0, 0.7);
+  background-image: url('/images/nav-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
   border-bottom: 1px solid #007bff;
   position: fixed;
   top: 0;
