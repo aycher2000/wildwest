@@ -38,7 +38,6 @@ export default function Contact() {
                   <option value="">Select a device type</option>
                   <option value="computer">Computer/Laptop</option>
                   <option value="console">Gaming Console</option>
-                  <option value="mobile">Mobile Device</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -57,9 +56,17 @@ export default function Contact() {
           <div className={styles.contactInfo}>
             <h2>Direct Contact</h2>
             <p>For quick responses and inquiries:</p>
-            <a href="mailto:info@wildwesttech.pro" className={styles.emailLink}>
-              info@wildwesttech.pro
-            </a>
+            <div className={styles.emailContainer}>
+              <a href="mailto:info@wildwesttech.pro" className={styles.emailLink}>
+                info@wildwesttech.pro
+              </a>
+              <a href="mailto:info@wildwesttech.pro" className={styles.emailIcon}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <path d="M22 7L12 13L2 7"/>
+                </svg>
+              </a>
+            </div>
             <p className={styles.note}>
               Based in Southern Oregon, serving the digital frontier with reliable tech solutions.
             </p>
