@@ -93,12 +93,11 @@
 }
 
 .links {
-  flex: 1;
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
+  margin-left: 2rem;
 }
 
 .navLink {
