@@ -11,7 +11,7 @@
   color: #FFA500;
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  text-align: left;
+  text-align: center;
   width: 100%;
   max-width: 800px;
 }
@@ -20,11 +20,19 @@
   max-width: 800px;
   width: 100%;
   text-align: left;
-  background: rgba(20, 20, 20, 0.7);
+  background-color: rgba(74, 158, 255, 0.05);
+  border: 1px solid rgba(74, 158, 255, 0.2);
   border-radius: 8px;
   padding: 2rem;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.content:hover {
+  transform: translateY(-2px);
+  border-color: rgba(74, 158, 255, 0.4);
+  box-shadow: 0 4px 20px rgba(74, 158, 255, 0.1);
 }
 
 .mainText {
