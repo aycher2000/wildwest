@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -62,9 +63,8 @@ export default function Home() {
             <p>Light SEO and AI discoverability tuning for your site.</p>
           </div>
         </div>
-
-        <footer>© 2025 Wild West Tech. All rights reserved.</footer>
       </main>
+      <Footer />
     </div>
   );
 }
