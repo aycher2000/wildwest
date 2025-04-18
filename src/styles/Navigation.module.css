@@ -75,12 +75,12 @@
   padding: 0 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
 
 .logoContainer {
-  display: flex;
-  align-items: center;
+  margin-right: auto;
 }
 
 .logoContainer img {
@@ -98,6 +98,7 @@
   gap: 1.5rem;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .navLink {
