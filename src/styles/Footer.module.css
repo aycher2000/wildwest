@@ -7,13 +7,10 @@
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay;
-  border-top: 1px solid #007bff;
-  color: #007bff;
-  text-align: center;
 }
 
 .container {
-  max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
