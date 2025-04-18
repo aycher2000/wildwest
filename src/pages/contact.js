@@ -77,6 +77,7 @@ export default function Contact() {
           <Link href="/">Back to Home</Link>
         </div>
       </div>
+      <footer>© 2025 Wild West Tech. All rights reserved.</footer>
     </div>
   );
 } 
