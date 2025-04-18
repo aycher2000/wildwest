@@ -181,12 +181,47 @@ h1 {
   background-color: rgba(74, 158, 255, 0.05);
   border: 1px solid rgba(74, 158, 255, 0.2);
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.services > div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(74, 158, 255, 0.05) 25%,
+    rgba(255, 142, 60, 0.05) 50%,
+    rgba(74, 158, 255, 0.05) 75%,
+    transparent 100%
+  );
+  animation: shimmer 8s infinite linear;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.services > div:hover::before {
+  opacity: 1;
 }
 
 .services > div:hover {
   transform: translateY(-2px);
   border-color: rgba(74, 158, 255, 0.4);
   box-shadow: 0 4px 20px rgba(74, 158, 255, 0.1);
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
 }
 
 h2 {
