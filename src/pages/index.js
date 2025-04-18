@@ -6,7 +6,7 @@ export default function Home() {
       {/* Logo */}
       <div className="logo-container">
         <Image 
-          src="/images/wildwesttech-logo.png"
+          src="/images/wildwesttech-logogold.png"
           alt="Wild West Tech Logo"
           width={200}
           height={200}
