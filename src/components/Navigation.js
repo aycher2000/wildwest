@@ -21,6 +21,9 @@ export default function Navigation() {
         <div className={styles.links}>
           <Link href="/" className={styles.navLink}>Home</Link>
           <Link href="/about" className={styles.navLink}>About</Link>
+          <Link href="/services" className={styles.navLink}>Services</Link>
+          <Link href="/faq" className={styles.navLink}>FAQ</Link>
+          <Link href="/blog" className={styles.navLink}>Blog</Link>
           <Link href="/contact" className={styles.navLink}>Contact</Link>
         </div>
       </div>
