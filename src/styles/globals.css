@@ -110,7 +110,7 @@ h1 {
 .subtitle {
   margin: 8px 0 16px 0;
   font-size: 14px;
-  color: #B4B4B4;
+  color: #FFD700;
   text-align: center;
 }
 
@@ -262,5 +262,47 @@ footer {
   footer {
     margin-top: 40px;
     font-size: 12px;
+  }
+}
+
+/* Mobile-first adjustments */
+@media (max-width: 639px) {
+  .services {
+    gap: 15px;
+  }
+
+  .links {
+    gap: 15px;
+  }
+
+  .links a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 640px) and (max-width: 767px) {
+  .services {
+    gap: 20px;
+  }
+}
+
+/* Additional responsive tweaks */
+@media (max-width: 639px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .subtitle {
+    font-size: 13px;
   }
 }
