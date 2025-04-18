@@ -75,6 +75,7 @@
   padding: 0 20px;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 2rem;
 }
 
@@ -93,11 +94,12 @@
 }
 
 .links {
+  flex: 1;
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  flex-wrap: wrap;
-  margin-left: 1.5rem;
+  justify-content: center;
+  margin-right: auto;
 }
 
 .navLink {
