@@ -1,16 +1,18 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import styles from '@/styles/Contact.module.css';
 
 export default function Contact() {
   return (
-    <div>
+    <div className="page-container">
       <Head>
         <title>Contact - Wild West Tech</title>
         <meta name="description" content="Contact Wild West Tech for computer repairs and custom builds in Southern Oregon" />
       </Head>
-
-      <div className={styles.container}>
+      <Navigation />
+      <main className={styles.container}>
         <h1 className={styles.title}>Contact Us</h1>
         
         <div className={styles.content}>
@@ -18,13 +20,13 @@ export default function Contact() {
             <h2>Request Repair Service</h2>
             <form className={styles.form}>
               <div className={styles.formGroup}>
-                <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="name" required />
+                <label htmlFor="name" className={styles.label}>Name</label>
+                <input type="text" id="name" className={styles.input} required />
               </div>
 
               <div className={styles.formGroup}>
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" required />
+                <label htmlFor="email" className={styles.label}>Email</label>
+                <input type="email" id="email" className={styles.input} required />
               </div>
 
               <div className={styles.formGroup}>
@@ -43,8 +45,8 @@ export default function Contact() {
               </div>
 
               <div className={styles.formGroup}>
-                <label htmlFor="issue">Describe the Issue</label>
-                <textarea id="issue" name="issue" rows="4" required></textarea>
+                <label htmlFor="issue" className={styles.label}>Describe the Issue</label>
+                <textarea id="issue" name="issue" rows="4" className={styles.textarea} required></textarea>
               </div>
 
               <button type="submit" className={styles.submitButton}>
@@ -72,12 +74,8 @@ export default function Contact() {
             </p>
           </div>
         </div>
-
-        <div className={styles.backLink}>
-          <Link href="/">Back to Home</Link>
-        </div>
-      </div>
-      <footer>© 2025 Wild West Tech. All rights reserved.</footer>
+      </main>
+      <Footer />
     </div>
   );
 } 

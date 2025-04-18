@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '@/styles/About.module.css';
 import Link from 'next/link';
+import Navigation from '@/components/Navigation'
+import Footer from '@/components/Footer'
 
 export default function About() {
   return (
@@ -11,6 +13,7 @@ export default function About() {
         <meta name="description" content="About Wild West Tech - Your trusted partner for computer repair and custom builds in Southern Oregon" />
       </Head>
 
+      <Navigation />
       <main className="main-content">
         <div className={styles.container}>
           <h1 className={styles.title}>About Wild West Tech</h1>
@@ -46,8 +49,7 @@ export default function About() {
           </div>
         </div>
       </main>
-
-      <footer>© 2025 Wild West Tech. All rights reserved.</footer>
+      <Footer />
     </div>
   );
 }
