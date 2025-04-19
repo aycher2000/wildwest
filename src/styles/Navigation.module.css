@@ -117,29 +117,66 @@
   color: #E6E6E6;
   text-decoration: none;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  padding: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background: rgba(74, 158, 255, 0.05);
+  overflow: hidden;
+  display: inline-block;
 }
 
-.navLink:hover {
-  color: #FFD700;
+.navLink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 215, 0, 0.15),
+    rgba(74, 158, 255, 0.15)
+  );
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
 }
 
 .navLink::after {
   content: '';
   position: absolute;
-  width: 0;
-  height: 2px;
   bottom: 0;
   left: 50%;
-  background: #FFD700;
-  transition: all 0.3s ease;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    #FFD700,
+    #4A9EFF
+  );
   transform: translateX(-50%);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navLink:hover {
+  color: #FFD700;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+  transform: translateY(-1px);
+}
+
+.navLink:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .navLink:hover::after {
-  width: 100%;
+  width: 80%;
+}
+
+.navLink:active {
+  transform: translateY(1px);
 }
 
 /* Hamburger Menu Styles */
@@ -225,10 +262,13 @@
   text-decoration: none;
   font-size: 1.5rem;
   position: relative;
-  padding: 0.5rem 2rem;
-  transition: all 0.3s ease;
+  padding: 0.75rem 2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
   transform: translateY(10px);
+  background: rgba(74, 158, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .mobileMenu.show .mobileLink {
@@ -237,9 +277,34 @@
   transition-delay: 0.2s;
 }
 
+.mobileLink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 215, 0, 0.1),
+    rgba(74, 158, 255, 0.1)
+  );
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
 .mobileLink:hover {
   color: #FFD700;
-  transform: scale(1.1);
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+  transform: scale(1.05);
+  background: rgba(74, 158, 255, 0.1);
+}
+
+.mobileLink:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 /* Mobile Styles */
