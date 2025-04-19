@@ -15,13 +15,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .links {
   display: flex;
   gap: 2rem;
   align-items: center;
+}
+
+.links + .links {
+  margin-top: 0.5rem;
 }
 
 .link {
@@ -38,25 +42,21 @@
 .copyright {
   color: #ffd700;
   font-size: 0.9rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
-/* Mobile styles */
+/* Mobile adjustments */
 @media (max-width: 639px) {
-  .container {
-    padding: 0 20px;
+  .footer {
+    padding: 3rem 0;
   }
-  
+
   .links {
     gap: 1.5rem;
   }
-  
+
   .link {
     font-size: 0.9rem;
-  }
-  
-  .copyright {
-    font-size: 0.8rem;
   }
 }
 
