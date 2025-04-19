@@ -60,11 +60,11 @@
 .nav {
   width: 100%;
   padding: 0.5rem 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
   background-image: url('/images/nav-bg.png');
   background-size: cover;
   background-position: center;
-  background-blend-mode: overlay;
+  background-blend-mode: normal;
   border-bottom: 1px solid #007bff;
   position: fixed;
   top: 0;
@@ -80,7 +80,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.4);
   z-index: -1;
 }
 
@@ -114,69 +114,50 @@
 }
 
 .navLink {
-  color: #E6E6E6;
+  color: #007bff;
   text-decoration: none;
   font-size: 1rem;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
   position: relative;
   padding: 0.5rem 1rem;
-  border-radius: 4px;
-  background: rgba(74, 158, 255, 0.05);
-  overflow: hidden;
-  display: inline-block;
-}
-
-.navLink::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    45deg,
-    rgba(255, 215, 0, 0.15),
-    rgba(74, 158, 255, 0.15)
-  );
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: -1;
 }
 
 .navLink::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(
-    to right,
-    #FFD700,
-    #4A9EFF
-  );
-  transform: translateX(-50%);
-  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #007bff;
+  transition: width 0.3s ease;
 }
 
 .navLink:hover {
-  color: #FFD700;
-  text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
-  transform: translateY(-1px);
-}
-
-.navLink:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
+  color: #007bff;
 }
 
 .navLink:hover::after {
-  width: 80%;
+  width: 100%;
 }
 
 .navLink:active {
   transform: translateY(1px);
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .navLink {
+    color: #FFD700;
+  }
+
+  .navLink::after {
+    background-color: #FFD700;
+  }
+
+  .navLink:hover {
+    color: #FFD700;
+  }
 }
 
 /* Hamburger Menu Styles */
