@@ -27,8 +27,8 @@ export default function Home() {
             Computer Repair, Custom Builds & Tech Solutions Across Southern Oregon and Beyond
           </p>
           <div className="links">
-            <a href="/request">Request Repair</a>
-            <a href="/quote">Get a Build Quote</a>
+            <a href="/contact">Request Repair</a>
+            <a href="mailto:info@wildwesttech.pro">Get a Build Quote</a>
           </div>
         </header>
 
