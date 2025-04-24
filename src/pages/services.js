@@ -3,18 +3,18 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: 'Tech Services in Cheyenne, WY | Wild West Tech',
-  description: 'Professional computer repair, custom PC builds, console repair, home setup, web design, and SEO services in Cheyenne, Wyoming. Expert tech solutions for all your needs.',
-  keywords: 'computer repair cheyenne, custom PC builds wyoming, console repair, home network setup, website design cheyenne, SEO services wyoming, tech support cheyenne',
+  title: 'Tech Services in Grants Pass, OR | Wild West Tech',
+  description: 'Professional computer repair, custom PC builds, console repair, home setup, web design, and SEO services in Grants Pass, Oregon. Expert tech solutions for all your needs.',
+  keywords: 'computer repair grants pass, custom PC builds oregon, console repair, home network setup, website design grants pass, SEO services oregon, tech support southern oregon',
   openGraph: {
-    title: 'Tech Services in Cheyenne, WY | Wild West Tech',
-    description: 'Expert computer repair, custom builds, and digital solutions in Cheyenne. From hardware fixes to web design, we\'ve got your tech needs covered.',
+    title: 'Tech Services in Grants Pass, OR | Wild West Tech',
+    description: 'Expert computer repair, custom builds, and digital solutions in Southern Oregon. From hardware fixes to web design, we\'ve got your tech needs covered.',
     images: [
       {
         url: '/images/og-services.jpg',
         width: 1200,
         height: 630,
-        alt: 'Wild West Tech Services in Cheyenne, Wyoming',
+        alt: 'Wild West Tech Services in Grants Pass, Oregon',
       },
     ],
   },
@@ -44,19 +44,19 @@ export default function Services() {
             "description": metadata.description,
             "@id": "https://wildwesttech.io",
             "url": "https://wildwesttech.io/services",
-            "telephone": "+1-307-555-0123",
+            "telephone": "+1-541-555-0123",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "123 Tech Trail",
-              "addressLocality": "Cheyenne",
-              "addressRegion": "WY",
-              "postalCode": "82001",
+              "addressLocality": "Grants Pass",
+              "addressRegion": "OR",
+              "postalCode": "97526",
               "addressCountry": "US"
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": 41.1400,
-              "longitude": -104.8202
+              "latitude": 42.4393,
+              "longitude": -123.3272
             },
             "openingHoursSpecification": {
               "@type": "OpeningHoursSpecification",
