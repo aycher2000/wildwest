@@ -1,6 +1,9 @@
-# Allow all crawlers
+# *
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: http://localhost:3007/sitemap.xml
+# Host
+Host: https://www.wildwesttech.pro
+
+# Sitemaps
+Sitemap: https://www.wildwesttech.pro/sitemap.xml
