@@ -64,7 +64,7 @@ export default function Navigation() {
               <div className={styles.mobileLinks}>
                 <Link href="/" className={styles.mobileLink} onClick={closeMenu}>Home</Link>
                 <Link href="/about" className={styles.mobileLink} onClick={closeMenu}>About</Link>
-                <Link href="#" onClick={(e) => { handleDummyClick(e); closeMenu(); }} className={styles.mobileLink}>Services</Link>
+                <Link href="/services" className={styles.mobileLink} onClick={closeMenu}>Services</Link>
                 <Link href="/contact" className={styles.mobileLink} onClick={closeMenu}>Contact</Link>
               </div>
             </div>
@@ -73,7 +73,7 @@ export default function Navigation() {
           <div className={styles.links}>
             <Link href="/" className={styles.navLink}>Home</Link>
             <Link href="/about" className={styles.navLink}>About</Link>
-            <Link href="#" onClick={handleDummyClick} className={styles.navLink}>Services</Link>
+            <Link href="/services" className={styles.navLink}>Services</Link>
             <Link href="/contact" className={styles.navLink}>Contact</Link>
           </div>
         )}
