@@ -213,6 +213,48 @@
   box-shadow: 0 4px 12px rgba(74, 158, 255, 0.1);
 }
 
+.phoneContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.phoneLink {
+  display: inline-block;
+  color: #4A9EFF;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: rgba(74, 158, 255, 0.1);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.phoneLink:hover {
+  background: rgba(74, 158, 255, 0.15);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(74, 158, 255, 0.1);
+}
+
+.phoneIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4A9EFF;
+  padding: 0.5rem;
+  background: rgba(74, 158, 255, 0.1);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.phoneIcon:hover {
+  background: rgba(74, 158, 255, 0.15);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(74, 158, 255, 0.1);
+}
+
 /* Mobile adjustments */
 @media (max-width: 639px) {
   .container {
