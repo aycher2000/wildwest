@@ -58,6 +58,15 @@ export default function Services() {
               We create fast, secure, and mobile-friendly websites for artists, small businesses, and creators. No cookie-cutter templates — just clean, effective design.
             </p>
           </div>
+
+          <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-lg p-6 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+            <h2 className="text-2xl font-bold mb-3 text-purple-400">
+              SEO & Optimization
+            </h2>
+            <p className="text-gray-300 leading-relaxed">
+              Lightweight SEO tailored to local search, and full AI discoverability prep for future-proof visibility.
+            </p>
+          </div>
         </div>
       </main>
       <Footer />
