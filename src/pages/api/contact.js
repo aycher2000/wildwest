@@ -21,19 +21,19 @@ export default async function handler(req, res) {
 
     // Create transporter
     const transporter = nodemailer.createTransport({
-      host: 'smtp.hostinger.com',
-      port: 465,
+      host: process.env.SMTP_HOST || 'smtp.hostinger.com',
+      port: parseInt(process.env.SMTP_PORT || '465'),
       secure: true,
       auth: {
-        user: 'info@wildwesttech.pro',
-        pass: 'xiCzij-bihdax-tosko5',
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
 
     // Email content
     const mailOptions = {
-      from: 'Wild West Tech <info@wildwesttech.pro>',
-      to: 'info@wildwesttech.pro',
+      from: `Wild West Tech <${process.env.SMTP_USER}>`,
+      to: process.env.SMTP_USER,
       replyTo: email,
       subject: `New Service Request from ${name}`,
       html: `
