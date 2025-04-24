@@ -31,6 +31,24 @@ export default function Services() {
               Whether it's a powerhouse gaming rig or a business workstation, we'll tailor a build that fits your exact needs — no bloated builds, just pure performance.
             </p>
           </div>
+
+          <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-lg p-6 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+            <h2 className="text-2xl font-bold mb-3 text-purple-400">
+              Console Repair
+            </h2>
+            <p className="text-gray-300 leading-relaxed">
+              Xbox, PlayStation, and Nintendo console repair services. We fix HDMI ports, hard drives, overheating, and power issues with care and precision.
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-lg p-6 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+            <h2 className="text-2xl font-bold mb-3 text-purple-400">
+              Home & Business Setup
+            </h2>
+            <p className="text-gray-300 leading-relaxed">
+              From WiFi networks to home servers, Plex media centers, and remote work environments — we bring simplicity and performance to your setup.
+            </p>
+          </div>
         </div>
       </main>
       <Footer />
