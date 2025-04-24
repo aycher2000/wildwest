@@ -55,7 +55,7 @@ export default function Home() {
           </div>
 
           <header>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-center">
               Computer Repair, Custom Builds & Tech Solutions Across Southern Oregon and Beyond
             </h1>
             <div className="links">
