@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
@@ -21,6 +22,39 @@ export const metadata = {
 };
 
 export default function Services() {
+  const [openService, setOpenService] = useState(null);
+
+  const services = [
+    {
+      title: "Computer Repair",
+      description: "Fast, reliable fixes for slow systems, broken components, or virus-infected machines. From hardware to software, we'll get your rig back in shape."
+    },
+    {
+      title: "Custom PC Builds",
+      description: "Whether it's a powerhouse gaming rig or a business workstation, we'll tailor a build that fits your exact needs — no bloated builds, just pure performance."
+    },
+    {
+      title: "Console Repair",
+      description: "Xbox, PlayStation, and Nintendo console repair services. We fix HDMI ports, hard drives, overheating, and power issues with care and precision."
+    },
+    {
+      title: "Home & Business Setup",
+      description: "From WiFi networks to home servers, Plex media centers, and remote work environments — we bring simplicity and performance to your setup."
+    },
+    {
+      title: "Website Design",
+      description: "We create fast, secure, and mobile-friendly websites for artists, small businesses, and creators. No cookie-cutter templates — just clean, effective design."
+    },
+    {
+      title: "SEO & Optimization",
+      description: "Lightweight SEO tailored to local search, and full AI discoverability prep for future-proof visibility."
+    }
+  ];
+
+  const toggleService = (index) => {
+    setOpenService(openService === index ? null : index);
+  };
+
   return (
     <>
       <Head>
@@ -89,58 +123,52 @@ export default function Services() {
           </p>
 
           <div className="max-w-4xl mx-auto px-4 space-y-6">
-            <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-lg p-6 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
-              <h2 className="text-2xl font-bold mb-3 text-purple-400">
-                Computer Repair
-              </h2>
-              <p className="text-gray-300 leading-relaxed">
-                Fast, reliable fixes for slow systems, broken components, or virus-infected machines. From hardware to software, we'll get your rig back in shape.
-              </p>
+            {/* Mobile Accordion (shown below md breakpoint) */}
+            <div className="md:hidden space-y-2">
+              {services.map((service, index) => (
+                <div key={index} className="border border-gray-700 rounded-lg overflow-hidden">
+                  <button
+                    onClick={() => toggleService(index)}
+                    className="w-full p-4 flex justify-between items-center bg-gradient-to-br from-gray-900 to-gray-800 hover:from-gray-800 hover:to-gray-700 transition-all duration-300"
+                  >
+                    <h2 className="text-xl font-bold text-purple-400">{service.title}</h2>
+                    <svg
+                      className={`w-6 h-6 transform transition-transform duration-300 ${
+                        openService === index ? 'rotate-180' : ''
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div
+                    className={`transition-all duration-300 ease-in-out ${
+                      openService === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    } overflow-hidden`}
+                  >
+                    <p className="p-4 text-gray-300">{service.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
 
-            <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-lg p-6 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
-              <h2 className="text-2xl font-bold mb-3 text-purple-400">
-                Custom PC Builds
-              </h2>
-              <p className="text-gray-300 leading-relaxed">
-                Whether it's a powerhouse gaming rig or a business workstation, we'll tailor a build that fits your exact needs — no bloated builds, just pure performance.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-lg p-6 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
-              <h2 className="text-2xl font-bold mb-3 text-purple-400">
-                Console Repair
-              </h2>
-              <p className="text-gray-300 leading-relaxed">
-                Xbox, PlayStation, and Nintendo console repair services. We fix HDMI ports, hard drives, overheating, and power issues with care and precision.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-lg p-6 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
-              <h2 className="text-2xl font-bold mb-3 text-purple-400">
-                Home & Business Setup
-              </h2>
-              <p className="text-gray-300 leading-relaxed">
-                From WiFi networks to home servers, Plex media centers, and remote work environments — we bring simplicity and performance to your setup.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-lg p-6 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
-              <h2 className="text-2xl font-bold mb-3 text-purple-400">
-                Website Design
-              </h2>
-              <p className="text-gray-300 leading-relaxed">
-                We create fast, secure, and mobile-friendly websites for artists, small businesses, and creators. No cookie-cutter templates — just clean, effective design.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-lg p-6 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
-              <h2 className="text-2xl font-bold mb-3 text-purple-400">
-                SEO & Optimization
-              </h2>
-              <p className="text-gray-300 leading-relaxed">
-                Lightweight SEO tailored to local search, and full AI discoverability prep for future-proof visibility.
-              </p>
+            {/* Desktop Cards (hidden below md breakpoint) */}
+            <div className="hidden md:grid md:grid-cols-1 lg:grid-cols-2 gap-6">
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-lg p-6 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
+                >
+                  <h2 className="text-2xl font-bold mb-3 text-purple-400">
+                    {service.title}
+                  </h2>
+                  <p className="text-gray-300 leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </main>
