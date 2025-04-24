@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.wildwesttech.pro
+
+# Sitemaps
+Sitemap: https://www.wildwesttech.pro/sitemap.xml
