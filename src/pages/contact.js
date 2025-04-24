@@ -103,7 +103,7 @@ export default function Contact() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className={styles.input}
+                  className={styles.formInput}
                   required
                   disabled={status.submitting}
                 />
@@ -117,7 +117,7 @@ export default function Contact() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={styles.input}
+                  className={styles.formInput}
                   required
                   disabled={status.submitting}
                 />
@@ -131,6 +131,7 @@ export default function Contact() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
+                  className={styles.formInput}
                   disabled={status.submitting}
                 />
               </div>
@@ -142,6 +143,7 @@ export default function Contact() {
                   name="deviceType"
                   value={formData.deviceType}
                   onChange={handleChange}
+                  className={styles.formSelect}
                   required
                   disabled={status.submitting}
                 >
@@ -160,7 +162,7 @@ export default function Contact() {
                   rows="4"
                   value={formData.issue}
                   onChange={handleChange}
-                  className={styles.textarea}
+                  className={styles.formTextarea}
                   required
                   disabled={status.submitting}
                 ></textarea>
