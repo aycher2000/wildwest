@@ -54,45 +54,55 @@ export default function Home() {
             />
           </div>
 
-          <header>
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-center">
+          <header className="mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent text-center">
               Computer Repair, Custom Builds & Tech Solutions Across Southern Oregon and Beyond
             </h1>
-            <div className="links">
-              <a href="/contact">Request Repair</a>
-              <a href="mailto:info@wildwesttech.pro">Get a Build Quote</a>
+            <div className="flex justify-center gap-4 mt-8">
+              <a 
+                href="/contact" 
+                className="px-6 py-3 bg-gradient-to-br from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg hover:shadow-purple-500/20"
+              >
+                Request Repair
+              </a>
+              <a 
+                href="mailto:info@wildwesttech.pro"
+                className="px-6 py-3 border border-purple-500 text-purple-400 rounded-lg hover:bg-purple-500/10 transition-all duration-300"
+              >
+                Get a Build Quote
+              </a>
             </div>
           </header>
 
-          <div className="services">
-            <div>
-              <h2>Computer Repair</h2>
-              <p>Fast fixes for slow, broken, or virus-infected computers.</p>
+          <div className="max-w-4xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-lg p-6 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+              <h2 className="text-2xl font-bold mb-3 text-purple-400">Computer Repair</h2>
+              <p className="text-gray-300 leading-relaxed">Fast fixes for slow, broken, or virus-infected computers.</p>
             </div>
 
-            <div>
-              <h2>Custom PC Builds</h2>
-              <p>Gaming, business, or home setups tailored to your needs.</p>
+            <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-lg p-6 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+              <h2 className="text-2xl font-bold mb-3 text-purple-400">Custom PC Builds</h2>
+              <p className="text-gray-300 leading-relaxed">Gaming, business, or home setups tailored to your needs.</p>
             </div>
 
-            <div>
-              <h2>Console Repair</h2>
-              <p>Xbox, PlayStation, and Nintendo hardware repair services.</p>
+            <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-lg p-6 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+              <h2 className="text-2xl font-bold mb-3 text-purple-400">Console Repair</h2>
+              <p className="text-gray-300 leading-relaxed">Xbox, PlayStation, and Nintendo hardware repair services.</p>
             </div>
 
-            <div>
-              <h2>Home & Business Setup</h2>
-              <p>WiFi networks, home servers, Plex media centers, and IT support.</p>
+            <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-lg p-6 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+              <h2 className="text-2xl font-bold mb-3 text-purple-400">Home & Business Setup</h2>
+              <p className="text-gray-300 leading-relaxed">WiFi networks, home servers, Plex media centers, and IT support.</p>
             </div>
 
-            <div>
-              <h2>Website Design</h2>
-              <p>Small business, artist, or personal websites. No e-commerce yet.</p>
+            <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-lg p-6 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+              <h2 className="text-2xl font-bold mb-3 text-purple-400">Website Design</h2>
+              <p className="text-gray-300 leading-relaxed">Small business, artist, or personal websites. No e-commerce yet.</p>
             </div>
 
-            <div>
-              <h2>SEO & Optimization</h2>
-              <p>Light SEO and AI discoverability tuning for your site.</p>
+            <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-lg p-6 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+              <h2 className="text-2xl font-bold mb-3 text-purple-400">SEO & Optimization</h2>
+              <p className="text-gray-300 leading-relaxed">Light SEO and AI discoverability tuning for your site.</p>
             </div>
           </div>
         </main>
