@@ -47,7 +47,7 @@ export default function App({ Component, pageProps }) {
             "image": "https://www.wildwesttech.pro/images/wildwesttech-logo.png",
             "@id": "https://www.wildwesttech.pro",
             "url": "https://www.wildwesttech.pro",
-            "telephone": "+1-541-555-1234",
+            "telephone": "+1-541-450-9799",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Service Area Only",
